@@ -6,9 +6,9 @@ import (
 
 // RegisterCodec registers concrete types on codec
 func RegisterCodec(cdc *codec.Codec) {
-	cdc.RegisterConcrete(MsgCreateScavenge{}, "fetterapp/CreateScavenge", nil)
-	cdc.RegisterConcrete(MsgCommitSolution{}, "fetterapp/CommitSolution", nil)
-	cdc.RegisterConcrete(MsgRevealSolution{}, "fetterapp/RevealSolution", nil)
+	cdc.RegisterConcrete(MsgCreateFettersApp{}, "fetterapp/CreateScavenge", nil)
+	cdc.RegisterConcrete(MsgCommitFettersApp}, "fetterapp/CommitSolution", nil)
+	cdc.RegisterConcrete(MsgRevealFettersApp{}, "fetterapp/RevealSolution", nil)
 }
 
 // ModuleCdc defines the module codec
