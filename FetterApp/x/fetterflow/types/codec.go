@@ -7,7 +7,7 @@ import (
 // RegisterCodec registers concrete types on codec
 func RegisterCodec(cdc *codec.Codec) {
 	cdc.RegisterConcrete(MsgCreateFetterApp{}, "fetterapp/CreateFetterApp", nil)
-	cdc.RegisterConcrete(MsgCommitFetterApp}, "fetterapp/CommitFetterApp", nil)
+	cdc.RegisterConcrete(MsgCommitFetterApp{}, "fetterapp/CommitFetterApp", nil)
 	cdc.RegisterConcrete(MsgRevealFetterApp{}, "fetterapp/RevealFetterApp", nil)
 }
 
