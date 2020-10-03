@@ -6,7 +6,9 @@ import (
 
 // RegisterCodec registers concrete types on codec
 func RegisterCodec(cdc *codec.Codec) {
-	// TODO: Register the modules msgs
+	cdc.RegisterConcrete(MsgCreateScavenge{}, "fetterapp/CreateScavenge", nil)
+	cdc.RegisterConcrete(MsgCommitSolution{}, "fetterapp/CommitSolution", nil)
+	cdc.RegisterConcrete(MsgRevealSolution{}, "fetterapp/RevealSolution", nil)
 }
 
 // ModuleCdc defines the module codec
