@@ -9,7 +9,7 @@ import (
 // ------------------------------------------------------------------------------
 var _ sdk.Msg = &MsgCommitFetterApp{}
 
-// MsgCommitSolution - struct for unjailing jailed validator
+// MsgCommitFetterApp - struct for unjailing jailed validator
 type MsgCommitFetterApp struct {
 	Scavenger             sdk.AccAddress `json:"scavenger" yaml:"scavenger"`                         // address of the scavenger
 	SolutionHash          string         `json:"solutionhash" yaml:"solutionhash"`                   // solutionhash of the scavenge
@@ -36,7 +36,7 @@ func (msg MsgCommitFetterApp) GetSigners() []sdk.AccAddress {
 }
 
 // GetSignBytes gets the bytes for the message signer to sign on
-func (msg MsgCommitSolution) GetSignBytes() []byte {
+func (msg MsgCommitFetterApp) GetSignBytes() []byte {
 	bz := ModuleCdc.MustMarshalJSON(msg)
 	return sdk.MustSortJSON(bz)
 }
