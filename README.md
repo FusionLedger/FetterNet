@@ -1,2 +1,2 @@
 # FetterNet
-Poetry fettered, fetters the human race
+Cosmos SDK Implementation of File Existence Proof for Invoice Exchange.
